@@ -7,10 +7,10 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: {
-    template: '%s | Next.js Netlify Starter',
-    default: 'Next.js Netlify Starter'
+    template: '%s | IPL Technology Solutions',
+    default: 'IPL家用脱毛仪制造商 - 专业OEM/ODM定制服务'
   },
-  description: 'A Next.js starter optimized for Netlify deployment',
+  description: '专业IPL家用脱毛仪制造商，提供OEM/ODM定制服务，FDA认证，CE标准，为全球品牌提供高质量激光美容设备解决方案。',
 }
 
 export default function RootLayout({ children }) {

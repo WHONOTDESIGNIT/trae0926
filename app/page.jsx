@@ -7,7 +7,7 @@ export default function HomePage() {
     {
       title: 'Image CDN',
       description: 'Netlify Image CDN optimization examples',
-      href: '/image-cdn',
+      href: '/image-cdn/image-cdn',
       icon: '🖼️'
     },
     {
@@ -27,6 +27,12 @@ export default function HomePage() {
       description: 'Classic Netlify Forms integration',
       href: '/classics',
       icon: '📝'
+    },
+    {
+      title: 'Random Quote',
+      description: 'Dynamic API route example',
+      href: '/quote/random',
+      icon: '💬'
     }
   ]
 
@@ -35,14 +41,14 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="text-center py-12">
         <h1 className="text-5xl font-bold mb-6">
-          Next.js + Netlify
+          IPL Technology Solutions
         </h1>
         <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
-          A modern starter template showcasing Next.js 14 features optimized for Netlify deployment
+          专业IPL家用脱毛仪制造商，提供OEM/ODM定制服务
         </p>
         <div className="flex gap-4 justify-center">
           <Link href="/blob" className="btn btn-lg">
-            Try Demo Features
+            查看演示功能
           </Link>
           <Link 
             href="https://github.com/netlify-templates/next-platform-starter" 
@@ -50,7 +56,7 @@ export default function HomePage() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            View Source
+            查看源码
           </Link>
         </div>
       </section>
@@ -58,7 +64,7 @@ export default function HomePage() {
       {/* Demo Pages Grid */}
       <section>
         <h2 className="text-3xl font-bold text-center mb-8">
-          Explore Demo Features
+          探索演示功能
         </h2>
         <div className="grid md:grid-cols-2 gap-6">
           {demoPages.map((page) => (
@@ -80,7 +86,7 @@ export default function HomePage() {
       {/* Random Quote Section */}
       <section>
         <h2 className="text-2xl font-bold text-center mb-6">
-          Dynamic Content Example
+          动态内容示例
         </h2>
         <div className="max-w-2xl mx-auto">
           <RandomQuote />
@@ -90,28 +96,28 @@ export default function HomePage() {
       {/* Features Section */}
       <section className="bg-gray-800 rounded-lg p-8">
         <h2 className="text-2xl font-bold text-center mb-6">
-          What's Included
+          包含功能
         </h2>
         <div className="grid md:grid-cols-3 gap-6">
           <div className="text-center">
             <div className="text-3xl mb-3">⚡</div>
             <h3 className="font-bold mb-2">Next.js 14</h3>
             <p className="text-gray-300 text-sm">
-              App Router, Server Components, and modern React features
+              App Router，服务器组件和现代React功能
             </p>
           </div>
           <div className="text-center">
             <div className="text-3xl mb-3">🎨</div>
             <h3 className="font-bold mb-2">Tailwind CSS</h3>
             <p className="text-gray-300 text-sm">
-              Utility-first CSS framework for rapid UI development
+              实用优先的CSS框架，快速UI开发
             </p>
           </div>
           <div className="text-center">
             <div className="text-3xl mb-3">🚀</div>
-            <h3 className="font-bold mb-2">Netlify Optimized</h3>
+            <h3 className="font-bold mb-2">Netlify优化</h3>
             <p className="text-gray-300 text-sm">
-              Edge Functions, Image CDN, and Forms integration
+              边缘函数，图像CDN和表单集成
             </p>
           </div>
         </div>
