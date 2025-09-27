@@ -5,19 +5,21 @@ const nextConfig = {
     trailingSlash: false,
     // 优化图片处理
     images: {
-        // Netlify自动处理图片优化，无需额外配置
-        unoptimized: false,
-        // 允许的图片域名
+        // Netlify图片优化配置
+        loader: 'custom',
+        loaderFile: './lib/netlify-image-loader.js',
+        formats: ['image/webp', 'image/avif'],
+        deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+        imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+        // 允许的外部图片域名（如果需要）
         remotePatterns: [
             {
                 protocol: 'https',
                 hostname: 'images.pexels.com',
                 port: '',
                 pathname: '/**',
-            },
-        ],
-        // 图片格式
-        formats: ['image/webp', 'image/avif']
+            }
+        ]
     },
     // 实验性功能配置
     experimental: {
