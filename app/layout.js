@@ -8,9 +8,9 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: {
     template: '%s | IPL Technology Solutions',
-    default: 'IPL家用脱毛仪制造商 - 专业OEM/ODM定制服务'
+    default: 'iShine IPL Hair Removal Device Manufacturer - Professional OEM/ODM Services'
   },
-  description: '专业IPL家用脱毛仪制造商，提供OEM/ODM定制服务，FDA认证，CE标准，为全球品牌提供高质量激光美容设备解决方案。',
+  description: 'Professional IPL hair removal device manufacturer providing OEM/ODM services, FDA certified, CE standard, delivering high-quality laser beauty device solutions for global brands.',
 }
 
 export default function RootLayout({ children }) {
