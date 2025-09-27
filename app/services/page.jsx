@@ -1,18 +1,6 @@
 import Link from 'next/link';
 import { Card } from 'components/card';
-import { 
-    Factory, 
-    Lightbulb, 
-    Palette, 
-    Cog, 
-    FileText, 
-    Globe, 
-    ArrowRight,
-    CheckCircle,
-    Clock,
-    Shield,
-    Users
-} from 'lucide-react';
+import { Factory, Lightbulb, Palette, Cog, FileText, Globe, ArrowRight, CircleCheck as CheckCircle, Clock, Shield, Users } from 'lucide-react';
 
 export const metadata = {
     title: '一站式IPL脱毛仪定制服务 - iShine制造',

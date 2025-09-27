@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Card } from 'components/card';
-import { Zap, Shield, Award, Globe, ArrowRight, CheckCircle } from 'lucide-react';
+import { Zap, Shield, Award, Globe, ArrowRight, CircleCheck as CheckCircle } from 'lucide-react';
 
 export const metadata = {
     title: 'IPL家用脱毛仪产品系列 - iShine专业制造',
