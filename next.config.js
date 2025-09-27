@@ -8,7 +8,14 @@ const nextConfig = {
         // Netlify自动处理图片优化，无需额外配置
         unoptimized: false,
         // 允许的图片域名
-        domains: ['images.pexels.com'],
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'images.pexels.com',
+                port: '',
+                pathname: '/**',
+            },
+        ],
         // 图片格式
         formats: ['image/webp', 'image/avif']
     },
