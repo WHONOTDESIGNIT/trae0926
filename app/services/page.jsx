@@ -1,128 +1,119 @@
 import Link from 'next/link';
 import { Card } from 'components/card';
-import { Factory, Lightbulb, Palette, Cog, FileText, Globe, ArrowRight, CircleCheck as CheckCircle, Clock, Shield, Users } from 'lucide-react';
 
 export const metadata = {
-    title: '一站式IPL脱毛仪定制服务 - iShine制造',
-    description: 'iShine提供从外观设计、功能样机、批量生产到各国法规申请的一站式IPL脱毛仪定制服务。15年制造经验，值得信赖。'
+    title: 'One-Stop IPL Hair Removal Device Customization Services - iShine Manufacturing',
+    description: 'iShine provides comprehensive IPL hair removal device customization services from appearance design, functional prototyping, mass production to regulatory compliance. 15 years of manufacturing experience, trusted partner.'
 };
 
 const services = [
     {
         id: 'design',
-        title: '外观设计服务',
-        icon: Palette,
-        description: '专业工业设计团队，打造独特的产品外观',
+        title: 'Appearance Design Service',
+        description: 'Professional industrial design team creating unique product appearance',
         features: [
-            '3D建模设计',
-            '人机工程学优化',
-            '品牌视觉融合',
-            '材质纹理选择',
-            '色彩方案定制'
+            '3D modeling design',
+            'Ergonomic optimization',
+            'Brand visual integration',
+            'Material texture selection',
+            'Color scheme customization'
         ],
-        timeline: '10-15个工作日',
-        deliverables: ['设计方案', '3D渲染图', '工程图纸']
+        timeline: '10-15 working days',
+        deliverables: ['Design proposal', '3D renderings', 'Engineering drawings']
     },
     {
         id: 'prototype',
-        title: '功能样机开发',
-        icon: Cog,
-        description: '快速原型制作，验证产品功能和性能',
+        title: 'Functional Prototype Development',
+        description: 'Rapid prototyping to verify product functionality and performance',
         features: [
-            '功能验证测试',
-            '性能参数调优',
-            '安全性能测试',
-            '用户体验优化',
-            '技术可行性评估'
+            'Function verification testing',
+            'Performance parameter optimization',
+            'Safety performance testing',
+            'User experience optimization',
+            'Technical feasibility assessment'
         ],
-        timeline: '20-30个工作日',
-        deliverables: ['功能样机', '测试报告', '优化建议']
+        timeline: '20-30 working days',
+        deliverables: ['Functional prototype', 'Test reports', 'Optimization recommendations']
     },
     {
         id: 'manufacturing',
-        title: '批量生产服务',
-        icon: Factory,
-        description: '规模化生产，严格质量控制，按时交付',
+        title: 'Mass Production Service',
+        description: 'Scalable production with strict quality control and on-time delivery',
         features: [
-            '自动化生产线',
-            '全程质量监控',
-            '柔性产能配置',
-            '供应链管理',
-            '包装定制服务'
+            'Automated production lines',
+            'Full-process quality monitoring',
+            'Flexible capacity configuration',
+            'Supply chain management',
+            'Packaging customization service'
         ],
-        timeline: '30-45个工作日',
-        deliverables: ['成品交付', '质检报告', '包装方案']
+        timeline: '30-45 working days',
+        deliverables: ['Finished product delivery', 'Quality inspection reports', 'Packaging solutions']
     },
     {
         id: 'compliance',
-        title: '法规认证申请',
-        icon: FileText,
-        description: '协助申请各国认证，确保产品合规上市',
+        title: 'Regulatory Certification Application',
+        description: 'Assist in applying for certifications from various countries to ensure compliant market entry',
         features: [
-            'CE认证申请',
-            'FDA注册服务',
-            'FCC合规测试',
-            'RoHS环保认证',
-            '各国标准咨询'
+            'CE certification application',
+            'FDA registration service',
+            'FCC compliance testing',
+            'RoHS environmental certification',
+            'Various national standards consultation'
         ],
-        timeline: '60-90个工作日',
-        deliverables: ['认证证书', '测试报告', '合规文档']
+        timeline: '60-90 working days',
+        deliverables: ['Certification certificates', 'Test reports', 'Compliance documentation']
     }
 ];
 
 const processSteps = [
     {
         step: 1,
-        title: '需求沟通',
-        description: '深入了解您的产品需求和市场定位',
-        duration: '1-3天'
+        title: 'Requirements Communication',
+        description: 'In-depth understanding of your product needs and market positioning',
+        duration: '1-3 days'
     },
     {
         step: 2,
-        title: '方案设计',
-        description: '制定详细的设计和技术方案',
-        duration: '5-10天'
+        title: 'Solution Design',
+        description: 'Develop detailed design and technical solutions',
+        duration: '5-10 days'
     },
     {
         step: 3,
-        title: '样机制作',
-        description: '制作功能样机，验证设计方案',
-        duration: '15-25天'
+        title: 'Prototype Production',
+        description: 'Create functional prototypes to verify design solutions',
+        duration: '15-25 days'
     },
     {
         step: 4,
-        title: '批量生产',
-        description: '规模化生产，严格质量控制',
-        duration: '30-45天'
+        title: 'Mass Production',
+        description: 'Scalable production with strict quality control',
+        duration: '30-45 days'
     },
     {
         step: 5,
-        title: '认证申请',
-        description: '协助申请各国认证和法规合规',
-        duration: '60-90天'
+        title: 'Certification Application',
+        description: 'Assist in applying for certifications and regulatory compliance',
+        duration: '60-90 days'
     }
 ];
 
 const advantages = [
     {
-        icon: Clock,
-        title: '快速响应',
-        description: '24小时内响应询盘，快速启动项目'
+        title: 'Rapid Response',
+        description: '24-hour inquiry response, quick project initiation'
     },
     {
-        icon: Shield,
-        title: '品质保证',
-        description: 'ISO13485认证，全程质量追溯'
+        title: 'Quality Assurance',
+        description: 'ISO13485 certified, full-process quality traceability'
     },
     {
-        icon: Users,
-        title: '专业团队',
-        description: '15年行业经验，专业技术团队'
+        title: 'Professional Team',
+        description: '15 years of industry experience, professional technical team'
     },
     {
-        icon: Globe,
-        title: '全球服务',
-        description: '支持全球认证，协助产品出海'
+        title: 'Global Service',
+        description: 'Support global certifications, assist product export'
     }
 ];
 
@@ -133,27 +124,27 @@ export default function ServicesPage() {
             <section className="text-center py-12 bg-gradient-to-r from-green-600 to-green-800 text-white rounded-lg">
                 <div className="max-w-4xl mx-auto px-4">
                     <h1 className="text-4xl font-bold mb-4">
-                        一站式IPL脱毛仪定制服务
+                        One-Stop IPL Hair Removal Device Customization Services
                     </h1>
                     <p className="text-xl opacity-90 mb-8">
-                        从外观设计到批量生产，从功能开发到法规认证，iShine为您提供完整解决方案
+                        From appearance design to mass production, from functional development to regulatory certification, iShine provides complete solutions
                     </p>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
                         <div className="bg-white/10 rounded-lg p-3">
                             <div className="font-bold text-lg">15+</div>
-                            <div>年制造经验</div>
+                            <div>Years Experience</div>
                         </div>
                         <div className="bg-white/10 rounded-lg p-3">
                             <div className="font-bold text-lg">500+</div>
-                            <div>成功项目</div>
+                            <div>Successful Projects</div>
                         </div>
                         <div className="bg-white/10 rounded-lg p-3">
                             <div className="font-bold text-lg">50+</div>
-                            <div>合作品牌</div>
+                            <div>Partner Brands</div>
                         </div>
                         <div className="bg-white/10 rounded-lg p-3">
                             <div className="font-bold text-lg">30</div>
-                            <div>国家认证</div>
+                            <div>Country Certifications</div>
                         </div>
                     </div>
                 </div>
@@ -162,61 +153,63 @@ export default function ServicesPage() {
             {/* Services Grid */}
             <section>
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl font-bold mb-4">核心服务</h2>
+                    <h2 className="text-3xl font-bold mb-4">Core Services</h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
-                        专业的一站式服务，让您的IPL产品从概念到市场无缝对接
+                        Professional one-stop services connecting your IPL products seamlessly from concept to market
                     </p>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-8">
-                    {services.map((service) => {
-                        const Icon = service.icon;
-                        return (
-                            <Card key={service.id} className="h-full hover:shadow-lg transition-shadow">
-                                <div className="flex items-center gap-3 mb-4">
-                                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                                        <Icon className="h-6 w-6 text-blue-600" />
-                                    </div>
-                                    <h3 className="text-xl font-bold text-gray-900">
-                                        {service.title}
-                                    </h3>
+                    {services.map((service) => (
+                        <Card key={service.id} className="h-full hover:shadow-lg transition-shadow">
+                            <div className="flex items-center gap-3 mb-4">
+                                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                    <span className="text-blue-600 font-bold text-lg">
+                                        {service.id === 'design' && '✏'}
+                                        {service.id === 'prototype' && '⚙'}
+                                        {service.id === 'manufacturing' && '🏭'}
+                                        {service.id === 'compliance' && '📋'}
+                                    </span>
                                 </div>
-                                
-                                <p className="text-gray-700 mb-4">
-                                    {service.description}
-                                </p>
-                                
-                                <div className="space-y-2 mb-4">
-                                    {service.features.map((feature, index) => (
-                                        <div key={index} className="flex items-center gap-2 text-sm">
-                                            <CheckCircle className="h-4 w-4 text-green-500" />
-                                            <span>{feature}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                                
-                                <div className="border-t pt-4 mt-4">
-                                    <div className="flex justify-between text-sm text-gray-600 mb-2">
-                                        <span>交付周期：</span>
-                                        <span className="font-semibold">{service.timeline}</span>
+                                <h3 className="text-xl font-bold text-gray-900">
+                                    {service.title}
+                                </h3>
+                            </div>
+                            
+                            <p className="text-gray-700 mb-4">
+                                {service.description}
+                            </p>
+                            
+                            <div className="space-y-2 mb-4">
+                                {service.features.map((feature, index) => (
+                                    <div key={index} className="flex items-center gap-2 text-sm">
+                                        <span className="w-4 h-4 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-xs">✓</span>
+                                        <span>{feature}</span>
                                     </div>
-                                    <div className="text-sm text-gray-600">
-                                        <span>交付物：</span>
-                                        <span className="ml-2">{service.deliverables.join('、')}</span>
-                                    </div>
+                                ))}
+                            </div>
+                            
+                            <div className="border-t pt-4 mt-4">
+                                <div className="flex justify-between text-sm text-gray-600 mb-2">
+                                    <span>Delivery Time:</span>
+                                    <span className="font-semibold">{service.timeline}</span>
                                 </div>
-                            </Card>
-                        );
-                    })}
+                                <div className="text-sm text-gray-600">
+                                    <span>Deliverables:</span>
+                                    <span className="ml-2">{service.deliverables.join(', ')}</span>
+                                </div>
+                            </div>
+                        </Card>
+                    ))}
                 </div>
             </section>
 
             {/* Process Steps */}
             <section className="bg-gray-50 rounded-lg p-8">
                 <div className="text-center mb-12">
-                    <h2 className="text-2xl font-bold mb-4">服务流程</h2>
+                    <h2 className="text-2xl font-bold mb-4">Service Process</h2>
                     <p className="text-gray-600">
-                        标准化流程，确保项目高效推进
+                        Standardized process ensuring efficient project progression
                     </p>
                 </div>
                 
@@ -240,42 +233,44 @@ export default function ServicesPage() {
             {/* Advantages */}
             <section>
                 <div className="text-center mb-12">
-                    <h2 className="text-2xl font-bold mb-4">选择iShine的优势</h2>
+                    <h2 className="text-2xl font-bold mb-4">Why Choose iShine</h2>
                     <p className="text-gray-600">
-                        专业、可靠、高效的合作伙伴
+                        Professional, reliable, and efficient partner
                     </p>
                 </div>
                 
                 <div className="grid md:grid-cols-4 gap-6">
-                    {advantages.map((advantage, index) => {
-                        const Icon = advantage.icon;
-                        return (
-                            <div key={index} className="text-center">
-                                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <Icon className="h-8 w-8 text-green-600" />
-                                </div>
-                                <h3 className="font-semibold mb-2">{advantage.title}</h3>
-                                <p className="text-sm text-gray-600">{advantage.description}</p>
+                    {advantages.map((advantage, index) => (
+                        <div key={index} className="text-center">
+                            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span className="text-green-600 text-2xl">
+                                    {index === 0 && '⚡'}
+                                    {index === 1 && '🛡'}
+                                    {index === 2 && '👥'}
+                                    {index === 3 && '🌍'}
+                                </span>
                             </div>
-                        );
-                    })}
+                            <h3 className="font-semibold mb-2">{advantage.title}</h3>
+                            <p className="text-sm text-gray-600">{advantage.description}</p>
+                        </div>
+                    ))}
                 </div>
             </section>
 
             {/* CTA Section */}
             <section className="text-center py-12 bg-gray-800 text-white rounded-lg">
                 <h2 className="text-2xl font-bold mb-4">
-                    准备启动您的IPL产品项目？
+                    Ready to Launch Your IPL Product Project?
                 </h2>
                 <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                    联系我们的专业团队，获取详细的服务方案和报价
+                    Contact our professional team to get detailed service solutions and quotations
                 </p>
                 <div className="flex gap-4 justify-center">
                     <Link href="/contact" className="btn btn-lg">
-                        获取服务方案
+                        Get Service Solutions
                     </Link>
                     <Link href="/cases" className="btn btn-lg bg-gray-700 hover:bg-gray-600">
-                        查看成功案例
+                        View Success Cases
                     </Link>
                 </div>
             </section>

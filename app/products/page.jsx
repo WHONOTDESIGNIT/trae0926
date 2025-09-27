@@ -1,66 +1,65 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Card } from 'components/card';
-import { Zap, Shield, Award, Globe, ArrowRight, CircleCheck as CheckCircle } from 'lucide-react';
 
 export const metadata = {
-    title: 'IPL家用脱毛仪产品系列 - iShine专业制造',
-    description: 'iShine提供全系列IPL家用脱毛仪产品，从入门级到专业级，满足不同市场需求。FDA认证，CE标准，品质保证。'
+    title: 'IPL Hair Removal Device Series - iShine Professional Manufacturing',
+    description: 'iShine offers complete IPL hair removal device series from entry-level to professional grade, meeting different market demands. FDA certified, CE standard, quality guaranteed.'
 };
 
 const products = [
     {
         id: 'classic-series',
-        name: 'iShine Classic 经典系列',
+        name: 'iShine Classic Series',
         model: 'IS-C100',
         image: 'https://images.pexels.com/photos/6621464/pexels-photo-6621464.jpeg?auto=compress&cs=tinysrgb&w=500',
-        description: '入门级IPL脱毛仪，适合家庭日常使用，性价比高',
+        description: 'Entry-level IPL hair removal device, suitable for daily home use with high cost-effectiveness',
         features: [
-            '515-1200nm宽光谱',
-            '5档能量调节',
-            '30万次闪光',
-            '3.1cm²治疗窗口'
+            '515-1200nm broad spectrum',
+            '5-level energy adjustment',
+            '300,000 flashes',
+            '3.1cm² treatment window'
         ],
-        applications: ['家用', '入门级'],
-        targetMarket: '大众消费市场'
+        applications: ['Home Use', 'Entry Level'],
+        targetMarket: 'Mass Consumer Market'
     },
     {
         id: 'pro-series',
-        name: 'iShine Pro 专业系列',
+        name: 'iShine Pro Series',
         model: 'IS-P200',
         image: 'https://images.pexels.com/photos/6621464/pexels-photo-6621464.jpeg?auto=compress&cs=tinysrgb&w=500',
-        description: '专业级IPL设备，更强功率，更快效果',
+        description: 'Professional-grade IPL device with higher power and faster results',
         features: [
-            '590nm精准波长',
-            '8档智能调节',
-            '50万次闪光',
-            '4.2cm²大治疗窗口'
+            '590nm precise wavelength',
+            '8-level smart adjustment',
+            '500,000 flashes',
+            '4.2cm² large treatment window'
         ],
-        applications: ['专业', '高端'],
-        targetMarket: '高端消费市场'
+        applications: ['Professional', 'Premium'],
+        targetMarket: 'High-end Consumer Market'
     },
     {
         id: 'mini-series',
-        name: 'iShine Mini 便携系列',
+        name: 'iShine Mini Series',
         model: 'IS-M50',
         image: 'https://images.pexels.com/photos/6621464/pexels-photo-6621464.jpeg?auto=compress&cs=tinysrgb&w=500',
-        description: '小巧便携，旅行必备，不占空间',
+        description: 'Compact and portable, perfect for travel, space-saving design',
         features: [
-            '紧凑设计',
-            '3档能量选择',
-            '20万次闪光',
-            '2.5cm²精准窗口'
+            'Compact design',
+            '3-level energy selection',
+            '200,000 flashes',
+            '2.5cm² precision window'
         ],
-        applications: ['便携', '旅行'],
-        targetMarket: '年轻消费群体'
+        applications: ['Portable', 'Travel'],
+        targetMarket: 'Young Consumer Group'
     }
 ];
 
 const specifications = [
-    { label: '波长范围', value: '515-1200nm' },
-    { label: '能量密度', value: '1-5 J/cm²' },
-    { label: '安全等级', value: 'IEC 60825-1' },
-    { label: '认证标准', value: 'CE/FDA/FCC' }
+    { label: 'Wavelength Range', value: '515-1200nm' },
+    { label: 'Energy Density', value: '1-5 J/cm²' },
+    { label: 'Safety Level', value: 'IEC 60825-1' },
+    { label: 'Certification', value: 'CE/FDA/FCC' }
 ];
 
 export default function ProductsPage() {
@@ -70,23 +69,23 @@ export default function ProductsPage() {
             <section className="text-center py-12 bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-lg">
                 <div className="max-w-4xl mx-auto px-4">
                     <h1 className="text-4xl font-bold mb-4">
-                        iShine IPL家用脱毛仪产品系列
+                        iShine IPL Hair Removal Device Series
                     </h1>
                     <p className="text-xl opacity-90 mb-8">
-                        专业制造，精工品质，为全球品牌提供完整的IPL脱毛仪解决方案
+                        Professional manufacturing, precision quality, providing complete IPL hair removal solutions for global brands
                     </p>
                     <div className="flex justify-center gap-8 text-sm">
                         <div className="flex items-center gap-2">
-                            <Shield className="h-5 w-5" />
-                            <span>FDA认证</span>
+                            <span className="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center">✓</span>
+                            <span>FDA Certified</span>
                         </div>
                         <div className="flex items-center gap-2">
-                            <Award className="h-5 w-5" />
-                            <span>CE标准</span>
+                            <span className="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center">★</span>
+                            <span>CE Standard</span>
                         </div>
                         <div className="flex items-center gap-2">
-                            <Globe className="h-5 w-5" />
-                            <span>全球服务</span>
+                            <span className="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center">◉</span>
+                            <span>Global Service</span>
                         </div>
                     </div>
                 </div>
@@ -95,9 +94,9 @@ export default function ProductsPage() {
             {/* Product Grid */}
             <section>
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl font-bold mb-4">产品系列</h2>
+                    <h2 className="text-3xl font-bold mb-4">Product Series</h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
-                        从入门级到专业级，满足不同市场定位和用户需求
+                        From entry-level to professional grade, meeting different market positioning and user needs
                     </p>
                 </div>
 
@@ -118,7 +117,7 @@ export default function ProductsPage() {
                             </h3>
                             
                             <p className="text-sm text-gray-600 mb-2">
-                                型号：{product.model}
+                                Model: {product.model}
                             </p>
                             
                             <p className="text-gray-700 text-sm mb-4">
@@ -128,7 +127,7 @@ export default function ProductsPage() {
                             <div className="space-y-2 mb-4">
                                 {product.features.map((feature, index) => (
                                     <div key={index} className="flex items-center gap-2 text-sm">
-                                        <CheckCircle className="h-4 w-4 text-green-500" />
+                                        <span className="w-4 h-4 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-xs">✓</span>
                                         <span>{feature}</span>
                                     </div>
                                 ))}
@@ -143,12 +142,11 @@ export default function ProductsPage() {
                             </div>
                             
                             <p className="text-xs text-gray-500 mb-4">
-                                目标市场：{product.targetMarket}
+                                Target Market: {product.targetMarket}
                             </p>
                             
                             <Link href="/contact" className="btn w-full">
-                                获取详细资料
-                                <ArrowRight className="ml-2 h-4 w-4" />
+                                Get Detailed Information →
                             </Link>
                         </Card>
                     ))}
@@ -158,9 +156,9 @@ export default function ProductsPage() {
             {/* Technical Specifications */}
             <section className="bg-gray-50 rounded-lg p-8">
                 <div className="text-center mb-8">
-                    <h2 className="text-2xl font-bold mb-4">技术规格</h2>
+                    <h2 className="text-2xl font-bold mb-4">Technical Specifications</h2>
                     <p className="text-gray-600">
-                        符合国际标准的技术参数，确保产品安全性和有效性
+                        International standard technical parameters ensuring product safety and effectiveness
                     </p>
                 </div>
                 
@@ -179,17 +177,17 @@ export default function ProductsPage() {
             {/* CTA Section */}
             <section className="text-center py-12 bg-gray-800 text-white rounded-lg">
                 <h2 className="text-2xl font-bold mb-4">
-                    准备开始您的IPL产品定制项目？
+                    Ready to Start Your IPL Product Customization Project?
                 </h2>
                 <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                    联系我们的专业团队，获取详细的产品规格书和定制方案
+                    Contact our professional team to get detailed product specifications and customization solutions
                 </p>
                 <div className="flex gap-4 justify-center">
                     <Link href="/contact" className="btn btn-lg">
-                        立即咨询
+                        Contact Now
                     </Link>
                     <Link href="/services" className="btn btn-lg bg-gray-700 hover:bg-gray-600">
-                        了解服务
+                        Learn About Services
                     </Link>
                 </div>
             </section>
