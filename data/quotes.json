@@ -1,0 +1,72 @@
+[
+  {
+    "text": "Innovation distinguishes between a leader and a follower",
+    "playedBy": "Steve Jobs",
+    "character": "Apple CEO",
+    "film": "Technology Leadership",
+    "year": "2005"
+  },
+  {
+    "text": "Quality is not an act, it is a habit",
+    "playedBy": "Aristotle",
+    "character": "Philosopher",
+    "film": "Ancient Wisdom",
+    "year": "384 BC"
+  },
+  {
+    "text": "The best way to predict the future is to create it",
+    "playedBy": "Peter Drucker",
+    "character": "Management Consultant",
+    "film": "Business Innovation",
+    "year": "1950"
+  },
+  {
+    "text": "Excellence is never an accident",
+    "playedBy": "Aristotle",
+    "character": "Philosopher", 
+    "film": "Philosophy of Excellence",
+    "year": "350 BC"
+  },
+  {
+    "text": "Success is not final, failure is not fatal",
+    "playedBy": "Winston Churchill",
+    "character": "Prime Minister",
+    "film": "World War II",
+    "year": "1942"
+  },
+  {
+    "text": "The only way to do great work is to love what you do",
+    "playedBy": "Steve Jobs",
+    "character": "Apple Founder",
+    "film": "Stanford Commencement",
+    "year": "2005"
+  },
+  {
+    "text": "Innovation is the specific instrument of entrepreneurship",
+    "playedBy": "Peter Drucker",
+    "character": "Management Expert",
+    "film": "Innovation and Entrepreneurship",
+    "year": "1985"
+  },
+  {
+    "text": "Quality means doing it right when no one is looking",
+    "playedBy": "Henry Ford",
+    "character": "Ford Motor Company",
+    "film": "Industrial Revolution",
+    "year": "1920"
+  },
+  {
+    "text": "The customer is the final inspector",
+    "playedBy": "W. Edwards Deming",
+    "character": "Quality Expert",
+    "film": "Total Quality Management",
+    "year": "1950"
+  },
+  {
+    "text": "Perfection is not attainable, but if we chase perfection we can catch excellence",
+    "playedBy": "Vince Lombardi",
+    "character": "Football Coach",
+    "film": "Sports Excellence",
+    "year": "1960"
+  }
+]
