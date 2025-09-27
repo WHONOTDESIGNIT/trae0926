@@ -8,7 +8,7 @@ const nextConfig = {
         // Netlify自动处理图片优化，无需额外配置
         unoptimized: false,
         // 允许的图片域名
-        domains: [],
+        domains: ['images.pexels.com'],
         // 图片格式
         formats: ['image/webp', 'image/avif']
     },
