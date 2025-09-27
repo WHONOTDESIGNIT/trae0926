@@ -5,10 +5,12 @@ import githubLogo from 'public/images/github-mark-white.svg';
 
 const navItems = [
     { linkText: 'Home', href: '/' },
-    { linkText: 'Image CDN', href: '/image-cdn/image-cdn' },
-    { linkText: 'Edge Function', href: '/edge' },
-    { linkText: 'Blobs', href: '/blob' },
-    { linkText: 'Classics', href: '/classics' }
+    { linkText: 'IPL Hair Removal', href: '/products' },
+    { linkText: 'Custom Services', href: '/services' },
+    { linkText: 'Cases', href: '/cases' },
+    { linkText: 'About', href: '/about' },
+    { linkText: 'News', href: '/news' },
+    { linkText: 'Contact', href: '/contact' }
 ];
 
 export function Header() {
