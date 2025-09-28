@@ -225,15 +225,15 @@ export default function HomePage() {
                     </linearGradient>
                   </defs>
                   <path 
-                    d="M 600 0 Q 650 375 600 750 L 1800 750 L 1800 0 Z" 
+                    d="M 720 0 Q 770 375 720 750 L 1800 750 L 1800 0 Z" 
                     fill="rgba(255,255,255,0.95)" 
                     stroke="rgba(5,68,208,0.2)" 
                     strokeWidth="2"
                   />
                 </svg>
                 
-                {/* Left Side - Image (1/3 area) */}
-                <div className="absolute left-0 top-0 w-1/3 h-full">
+                {/* Left Side - Image (4/10 area) */}
+                <div className="absolute left-0 top-0 h-full" style={{width: '40%'}}>
                   <img 
                     src={featureTestimonials[activeFeature].image}
                     alt={featureTestimonials[activeFeature].title}
@@ -241,10 +241,10 @@ export default function HomePage() {
                   />
                 </div>
                 
-                {/* Right Side - Content (2/3 area) */}
-                <div className="absolute right-0 top-0 w-2/3 h-full flex flex-col justify-center px-16 z-20">
-                  {/* Customer Logo */}
-                  <div className="mb-8">
+                {/* Right Side - Content (6/10 area) */}
+                <div className="absolute right-0 top-0 h-full flex flex-col justify-center px-16 z-20" style={{width: '60%'}}>
+                  {/* Customer Logo - positioned at vertical center line */}
+                  <div className="mb-8 flex justify-center">
                     <div className="w-32 h-16 rounded-lg flex items-center justify-center" style={{backgroundColor: '#F1F3F6'}}>
                       <span className="text-2xl font-bold" style={{color: '#0544d0'}}>
                         {featureTestimonials[activeFeature].author.split(' ')[0]}
@@ -254,11 +254,6 @@ export default function HomePage() {
                   
                   {/* Customer Review */}
                   <div className="mb-8">
-                    <div className="flex mb-4">
-                      {[...Array(featureTestimonials[activeFeature].rating)].map((_, i) => (
-                        <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
-                      ))}
-                    </div>
                     <blockquote className="text-2xl leading-relaxed mb-6" style={{color: '#263237'}}>
                       "{featureTestimonials[activeFeature].testimonial}"
                     </blockquote>
@@ -281,10 +276,10 @@ export default function HomePage() {
                 {/* Left Navigation Button */}
                 <button
                   onClick={() => setActiveFeature(activeFeature === 0 ? featureTestimonials.length - 1 : activeFeature - 1)}
-                  className="absolute left-8 top-1/2 transform -translate-y-1/2 w-16 h-16 rounded-full shadow-lg transition-all hover:scale-110 z-30"
-                  style={{backgroundColor: 'rgba(255,255,255,0.9)'}}
+                  className="absolute top-1/2 transform -translate-y-1/2 w-16 h-16 rounded-full shadow-lg transition-all hover:scale-110 z-30"
+                  style={{left: '0px', backgroundColor: '#0544d0'}}
                 >
-                  <svg className="w-8 h-8 mx-auto" fill="none" stroke="#0544d0" viewBox="0 0 24 24">
+                  <svg className="w-8 h-8 mx-auto" fill="none" stroke="white" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                   </svg>
                 </button>
@@ -292,10 +287,10 @@ export default function HomePage() {
                 {/* Right Navigation Button */}
                 <button
                   onClick={() => setActiveFeature(activeFeature === featureTestimonials.length - 1 ? 0 : activeFeature + 1)}
-                  className="absolute right-8 top-1/2 transform -translate-y-1/2 w-16 h-16 rounded-full shadow-lg transition-all hover:scale-110 z-30"
-                  style={{backgroundColor: 'rgba(255,255,255,0.9)'}}
+                  className="absolute top-1/2 transform -translate-y-1/2 w-16 h-16 rounded-full shadow-lg transition-all hover:scale-110 z-30"
+                  style={{right: '0px', backgroundColor: '#0544d0'}}
                 >
-                  <svg className="w-8 h-8 mx-auto" fill="none" stroke="#0544d0" viewBox="0 0 24 24">
+                  <svg className="w-8 h-8 mx-auto" fill="none" stroke="white" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </button>
