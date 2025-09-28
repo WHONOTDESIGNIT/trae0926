@@ -80,12 +80,13 @@ export default function HomePage() {
           <div className="flex justify-between items-center">
             <div className="text-2xl font-bold">iShine IPL</div>
             <nav className="hidden md:flex space-x-8">
-              <a href="#features" className="hover:text-blue-200 transition-colors">Features</a>
-              <a href="#technology" className="hover:text-blue-200 transition-colors">Technology</a>
-              <a href="#results" className="hover:text-blue-200 transition-colors">Results</a>
-              <a href="#testimonials" className="hover:text-blue-200 transition-colors">Reviews</a>
-              <a href="#contact" className="bg-white text-blue-600 px-6 py-2 rounded-full font-semibold hover:bg-blue-50 transition-colors">
-                Order Now
+              <a href="/ipl-hair-removal" className="hover:text-blue-200 transition-colors">IPL Hair Removal</a>
+              <a href="/services" className="hover:text-blue-200 transition-colors">Services</a>
+              <a href="/work" className="hover:text-blue-200 transition-colors">Work</a>
+              <a href="/blog" className="hover:text-blue-200 transition-colors">Blog</a>
+              <a href="/learn" className="hover:text-blue-200 transition-colors">Learn</a>
+              <a href="/contact" className="bg-white text-blue-600 px-6 py-2 rounded-full font-semibold hover:bg-blue-50 transition-colors">
+                Contact Us
               </a>
             </nav>
           </div>
