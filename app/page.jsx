@@ -80,12 +80,12 @@ export default function HomePage() {
           <div className="flex justify-between items-center">
             <div className="text-2xl font-bold" style={{color: '#0544d0'}}>iShine IPL</div>
             <nav className="hidden md:flex space-x-8">
-              <a href="/ipl-hair-removal" className="hover:opacity-80 transition-colors no-underline" style={{color: '#263237', textDecoration: 'none'}}>IPL Hair Removal</a>
-              <a href="/services" className="hover:opacity-80 transition-colors no-underline" style={{color: '#263237', textDecoration: 'none'}}>Solutions</a>
-              <a href="/work" className="hover:opacity-80 transition-colors no-underline" style={{color: '#263237', textDecoration: 'none'}}>Work</a>
-              <a href="/about" className="hover:opacity-80 transition-colors no-underline" style={{color: '#263237', textDecoration: 'none'}}>About</a>
-              <a href="/blog" className="hover:opacity-80 transition-colors no-underline" style={{color: '#263237', textDecoration: 'none'}}>Blog</a>
-              <a href="/learn" className="hover:opacity-80 transition-colors no-underline" style={{color: '#263237', textDecoration: 'none'}}>Resources</a>
+              <a href="/ipl-hair-removal" className="flex items-center hover:opacity-80 transition-colors no-underline" style={{color: '#263237', textDecoration: 'none'}}>IPL Hair Removal</a>
+              <a href="/services" className="flex items-center hover:opacity-80 transition-colors no-underline" style={{color: '#263237', textDecoration: 'none'}}>Solutions</a>
+              <a href="/work" className="flex items-center hover:opacity-80 transition-colors no-underline" style={{color: '#263237', textDecoration: 'none'}}>Work</a>
+              <a href="/about" className="flex items-center hover:opacity-80 transition-colors no-underline" style={{color: '#263237', textDecoration: 'none'}}>About</a>
+              <a href="/blog" className="flex items-center hover:opacity-80 transition-colors no-underline" style={{color: '#263237', textDecoration: 'none'}}>Blog</a>
+              <a href="/learn" className="flex items-center hover:opacity-80 transition-colors no-underline" style={{color: '#263237', textDecoration: 'none'}}>Resources</a>
               <a href="/contact" className="px-6 py-2 rounded-full font-semibold transition-colors no-underline" style={{backgroundColor: '#0544d0', color: '#FFFFFF', textDecoration: 'none'}} onMouseEnter={(e) => e.target.style.backgroundColor = '#0439b8'} onMouseLeave={(e) => e.target.style.backgroundColor = '#0544d0'}>
                 Contact Us
               </a>
