@@ -1,0 +1,10 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+	<defs>
+		<image  width="16" height="16" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAAAXNSR0IB2cksfwAAAANQTFRF////p8QbyAAAAA5JREFUeJxjZGBgJAUBAAHIABFDZFrTAAAAAElFTkSuQmCC"/>
+		<image  width="35" height="16" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAQCAMAAACr6TZoAAAAAXNSR0IB2cksfwAAALpQTFRF////////BUDQ/v//5u749vf6ytTl8/Pz9PT09vj8/P3+/v7+oKCgl5eX/f39/Pz8AAAABUTQoaGhk5OTcXFxdXV129vbW1tbampq2NjY+vz9xdXxv9Dwv9Hvv9Dv6e/5UVFRgYGBbGxsMDAwjY2NODg4dnZ2QEBAZWVlqamp6vD5cpbgbJLebJLf0Nrxe3t7np6ejo6OYWFht7e3a2tr1NTUUFBQX19f2dnZ///+6u/4+vz++vv9////sv4OWwAAAD50Uk5T/6r///7///////7//////////////////////////////////////////////////////////////////3H3u1dnAAAAfElEQVR4nGNkIAgYGWEsJoZ/9FHDxMD4n7AaJkbGX1AxdsYfWO3iZPwGE+JmZPzHzPCJ//8nhBomMOOfAMMHQTDrNxtQkBEBHmJRw8+IDP4zXUL4Cw704fInGCyPI7vZ4hjzX0L+Yv9JyO/WjEeIC2dGHJYRFxeYHkMHNgAkhB5dQwv1XQAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Background" href="#img1" x="0" y="0"/>
+	<use id="wechat_2025-09-28_135951_818 (1).webp" href="#img2" x="-1" y="0"/>
+</svg>
