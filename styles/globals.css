@@ -25,7 +25,17 @@
     --card-foreground: 38 50 55;
     --popover: 255 255 255;
     --popover-foreground: 38 50 55;
-    --primary: 5 68 208;
+    --primary: 220 95% 42%;
+    --primary-50: 220 95% 95%;
+    --primary-100: 220 95% 90%;
+    --primary-200: 220 95% 80%;
+    --primary-300: 220 95% 70%;
+    --primary-400: 220 95% 60%;
+    --primary-500: 220 95% 42%;
+    --primary-600: 220 95% 35%;
+    --primary-700: 220 95% 28%;
+    --primary-800: 220 95% 21%;
+    --primary-900: 220 95% 14%;
     --primary-foreground: 255 255 255;
     --secondary: 241 243 246;
     --secondary-foreground: 38 50 55;
