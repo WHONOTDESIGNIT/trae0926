@@ -91,7 +91,8 @@
     }
 
     a:not(.btn) {
-        @apply underline transition hover:opacity-80 text-[#377DFF];
+        @apply transition hover:opacity-80 text-[#377DFF];
+        text-decoration: none;
     }
 
     :not(pre) > code {
