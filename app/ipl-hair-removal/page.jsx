@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Card } from 'components/card';
-import { Zap, Shield, Heart, Users, Award, CheckCircle } from 'lucide-react';
+import { Zap, Shield, Heart, Users, Award, CircleCheck as CheckCircle } from 'lucide-react';
 
 export const metadata = {
     title: 'IPL Hair Removal Technology - Professional At-Home Solutions | iShine',

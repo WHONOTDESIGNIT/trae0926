@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Star, Shield, Award, Zap, Heart, Users, CheckCircle, Play } from 'lucide-react'
+import { Star, Shield, Award, Zap, Heart, Users, CircleCheck as CheckCircle, Play } from 'lucide-react'
 
 export default function HomePage() {
   const [activeTestimonial, setActiveTestimonial] = useState(0)
