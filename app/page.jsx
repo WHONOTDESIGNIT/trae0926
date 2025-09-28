@@ -6,6 +6,8 @@ import { Star, Shield, Award, Zap, Heart, Users, CircleCheck as CheckCircle, Pla
 export default function HomePage() {
   const [activeTestimonial, setActiveTestimonial] = useState(0)
 
+  const [activeFeature, setActiveFeature] = useState(0)
+
   const testimonials = [
     {
       text: "Amazing results! I've been using iShine IPL for 3 months and my hair growth has reduced by 90%. The device is so easy to use at home.",
@@ -24,6 +26,57 @@ export default function HomePage() {
     }
   ]
 
+  const featureTestimonials = [
+    {
+      image: "https://images.pexels.com/photos/6621464/pexels-photo-6621464.jpeg?auto=compress&cs=tinysrgb&w=600",
+      title: "Advanced IPL Technology",
+      testimonial: "The technology is incredible! I can feel the precision and quality in every flash. It's like having a professional treatment at home.",
+      author: "Jennifer M.",
+      location: "California, USA",
+      rating: 5
+    },
+    {
+      image: "https://images.pexels.com/photos/3997991/pexels-photo-3997991.jpeg?auto=compress&cs=tinysrgb&w=600",
+      title: "FDA Approved & CE Certified",
+      testimonial: "Safety was my biggest concern, but knowing it's FDA approved gave me complete confidence. No side effects, just amazing results!",
+      author: "Dr. Sarah Chen",
+      location: "New York, USA",
+      rating: 5
+    },
+    {
+      image: "https://images.pexels.com/photos/3825527/pexels-photo-3825527.jpeg?auto=compress&cs=tinysrgb&w=600",
+      title: "Gentle on All Skin Types",
+      testimonial: "I have sensitive skin and was worried, but the 5 intensity levels let me find the perfect setting. So gentle yet effective!",
+      author: "Maria Rodriguez",
+      location: "Madrid, Spain",
+      rating: 5
+    },
+    {
+      image: "https://images.pexels.com/photos/6621464/pexels-photo-6621464.jpeg?auto=compress&cs=tinysrgb&w=600",
+      title: "Suitable for Men & Women",
+      testimonial: "My husband and I both use it! Works perfectly on his chest hair and my legs. One device for the whole family.",
+      author: "Lisa & Tom Johnson",
+      location: "London, UK",
+      rating: 5
+    },
+    {
+      image: "https://images.pexels.com/photos/3997991/pexels-photo-3997991.jpeg?auto=compress&cs=tinysrgb&w=600",
+      title: "500,000 Flash Guarantee",
+      testimonial: "Been using it for over a year and still going strong! The flash count is incredible - definitely worth the investment.",
+      author: "Michael Zhang",
+      location: "Toronto, Canada",
+      rating: 5
+    },
+    {
+      image: "https://images.pexels.com/photos/3825527/pexels-photo-3825527.jpeg?auto=compress&cs=tinysrgb&w=600",
+      title: "Visible Results in 4 Weeks",
+      testimonial: "I couldn't believe how fast it worked! After just 4 weeks, I could see a huge difference. Now at 12 weeks, 90% hair reduction!",
+      author: "Emma Thompson",
+      location: "Sydney, Australia",
+      rating: 5
+    }
+  ]
+
   const features = [
     {
       icon: <Zap className="w-8 h-8 text-blue-500" />,
@@ -39,21 +92,6 @@ export default function HomePage() {
       icon: <Heart className="w-8 h-8 text-pink-500" />,
       title: "Gentle on All Skin Types",
       description: "5 intensity levels suitable for different skin tones and hair colors with built-in skin sensor."
-    },
-    {
-      icon: <Users className="w-8 h-8 text-purple-500" />,
-      title: "Suitable for Men & Women",
-      description: "Versatile design perfect for both men and women, covering face, body, and sensitive areas."
-    },
-    {
-      icon: <Award className="w-8 h-8 text-yellow-500" />,
-      title: "500,000 Flash Guarantee",
-      description: "Long-lasting lamp with 500,000 flashes - enough for full-body treatments for years."
-    },
-    {
-      icon: <CheckCircle className="w-8 h-8 text-teal-500" />,
-      title: "Visible Results in 4 Weeks",
-      description: "Clinical studies show up to 92% hair reduction after 12 weeks of regular use."
     }
   ]
 
@@ -106,11 +144,13 @@ export default function HomePage() {
           </p>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {features.slice(0, 3).map((feature, index) => (
+            {featureTestimonials.slice(0, 3).map((feature, index) => (
               <div key={index} className="rounded-2xl p-8 border" style={{backgroundColor: 'rgba(255,255,255,0.1)', borderColor: 'rgba(255,255,255,0.2)'}}>
-                <div className="flex justify-center mb-4">{feature.icon}</div>
+                <div className="flex justify-center mb-4">
+                  <Zap className="w-8 h-8 text-blue-500" />
+                </div>
                 <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                <p style={{color: '#FFFFFF'}}>{feature.description}</p>
+                <p style={{color: '#FFFFFF'}}>{feature.testimonial}</p>
               </div>
             ))}
           </div>
@@ -161,7 +201,7 @@ export default function HomePage() {
       </section>
 
       {/* Features Grid */}
-      <section id="features" className="py-20" style={{backgroundColor: '#F1F3F6'}}>
+      <section id="features" className="py-20" style={{backgroundColor: '#FFFFFF'}}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4" style={{color: '#263237'}}>Why Work with iShine?</h2>
@@ -170,14 +210,76 @@ export default function HomePage() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow" style={{backgroundColor: '#FFFFFF'}}>
-                <div className="flex justify-center mb-6">{feature.icon}</div>
-                <h3 className="text-xl font-semibold mb-4 text-center" style={{color: '#263237'}}>{feature.title}</h3>
-                <p className="text-center" style={{color: '#455962'}}>{feature.description}</p>
+          <div className="max-w-6xl mx-auto">
+            {/* Current Feature Display */}
+            <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+              <div className="relative">
+                <img 
+                  src={featureTestimonials[activeFeature].image}
+                  alt={featureTestimonials[activeFeature].title}
+                  className="w-full h-96 object-cover rounded-2xl shadow-lg"
+                />
               </div>
-            ))}
+              
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-3xl font-bold mb-4" style={{color: '#263237'}}>
+                    {featureTestimonials[activeFeature].title}
+                  </h3>
+                  <div className="flex mb-4">
+                    {[...Array(featureTestimonials[activeFeature].rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                </div>
+                
+                <blockquote className="text-xl italic mb-6" style={{color: '#455962'}}>
+                  "{featureTestimonials[activeFeature].testimonial}"
+                </blockquote>
+                
+                <div className="border-l-4 pl-4" style={{borderColor: '#0544d0'}}>
+                  <p className="font-semibold" style={{color: '#263237'}}>
+                    {featureTestimonials[activeFeature].author}
+                  </p>
+                  <p className="text-sm" style={{color: '#455962'}}>
+                    {featureTestimonials[activeFeature].location}
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Navigation Dots */}
+            <div className="flex justify-center space-x-3">
+              {featureTestimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setActiveFeature(index)}
+                  className={`w-4 h-4 rounded-full transition-colors ${
+                    index === activeFeature ? '' : ''
+                  }`}
+                  style={{backgroundColor: index === activeFeature ? '#0544d0' : '#F1F3F6'}}
+                />
+              ))}
+            </div>
+            
+            {/* Feature Thumbnails */}
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-8">
+              {featureTestimonials.map((feature, index) => (
+                <button
+                  key={index}
+                  onClick={() => setActiveFeature(index)}
+                  className={`p-4 rounded-lg text-center transition-all ${
+                    index === activeFeature ? 'shadow-lg' : 'hover:shadow-md'
+                  }`}
+                  style={{
+                    backgroundColor: index === activeFeature ? '#0544d0' : '#F1F3F6',
+                    color: index === activeFeature ? '#FFFFFF' : '#263237'
+                  }}
+                >
+                  <h4 className="text-sm font-semibold">{feature.title}</h4>
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </section>
