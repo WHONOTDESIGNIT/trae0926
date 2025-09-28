@@ -164,9 +164,9 @@ export default function HomePage() {
       <section id="features" className="py-20" style={{backgroundColor: '#F1F3F6'}}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4" style={{color: '#263237'}}>Why Choose iShine IPL?</h2>
+            <h2 className="text-4xl font-bold mb-4" style={{color: '#263237'}}>Why Work with iShine?</h2>
             <p className="text-xl max-w-3xl mx-auto" style={{color: '#455962'}}>
-              Advanced technology meets user-friendly design for the ultimate hair removal experience
+              We're not ones to sing our own praises so we'll leave that to our clients! Here are some nice things they have to say about us…
             </p>
           </div>
           
