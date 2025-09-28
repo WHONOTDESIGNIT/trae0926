@@ -1,5 +1,7 @@
 import { Inter } from 'next/font/google'
 import 'styles/globals.css'
+import { Header } from '../components/header';
+import { Footer } from '../components/footer';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -43,13 +45,18 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="canonical" href="https://ishine-ipl.com" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#2563eb" />
+        <meta name="theme-color" content="#0544d0" />
       </head>
       <body className={`${inter.className} min-h-screen bg-white text-gray-900 antialiased`}>
-        <main>
-          {children}
-        </main>
+        <div className="flex flex-col min-h-screen">
+          <Header />
+          <main className="flex-1">
+            {children}
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   )
