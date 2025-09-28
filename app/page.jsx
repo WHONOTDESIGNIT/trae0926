@@ -277,7 +277,7 @@ export default function HomePage() {
                 <button
                   onClick={() => setActiveFeature(activeFeature === 0 ? featureTestimonials.length - 1 : activeFeature - 1)}
                   className="absolute top-1/2 transform -translate-y-1/2 w-16 h-16 rounded-full shadow-lg transition-all hover:scale-110 z-30"
-                  style={{left: '0px', backgroundColor: '#0544d0'}}
+                  style={{left: '-32px', backgroundColor: '#0544d0'}}
                 >
                   <svg className="w-8 h-8 mx-auto" fill="none" stroke="white" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -288,7 +288,7 @@ export default function HomePage() {
                 <button
                   onClick={() => setActiveFeature(activeFeature === featureTestimonials.length - 1 ? 0 : activeFeature + 1)}
                   className="absolute top-1/2 transform -translate-y-1/2 w-16 h-16 rounded-full shadow-lg transition-all hover:scale-110 z-30"
-                  style={{right: '0px', backgroundColor: '#0544d0'}}
+                  style={{right: '-32px', backgroundColor: '#0544d0'}}
                 >
                   <svg className="w-8 h-8 mx-auto" fill="none" stroke="white" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
