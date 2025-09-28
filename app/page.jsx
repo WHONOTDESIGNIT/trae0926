@@ -78,8 +78,8 @@ export default function HomePage() {
       <header className="sticky top-0 z-50" style={{backgroundColor: '#FFFFFF', color: '#263237'}}>
         <div className="container mx-auto px-8 py-8">
           <div className="flex justify-between items-center">
-            <div className="text-4xl font-bold" style={{color: '#0544d0'}}>iShine IPL</div>
-            <nav className="hidden md:flex space-x-16">
+            <div className="text-4xl font-bold ml-8" style={{color: '#0544d0'}}>iShine IPL</div>
+            <nav className="hidden md:flex space-x-10">
               <a href="/ipl-hair-removal" className="flex items-center hover:opacity-80 transition-colors no-underline text-2xl" style={{color: '#263237', textDecoration: 'none'}}>IPL Hair Removal</a>
               <a href="/services" className="flex items-center hover:opacity-80 transition-colors no-underline text-2xl" style={{color: '#263237', textDecoration: 'none'}}>Solutions</a>
               <a href="/work" className="flex items-center hover:opacity-80 transition-colors no-underline text-2xl" style={{color: '#263237', textDecoration: 'none'}}>Work</a>
