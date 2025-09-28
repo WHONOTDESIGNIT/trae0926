@@ -46,6 +46,7 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#0544d0" />
       </head>
+      <body>
         <div className="flex flex-col min-h-screen">
           <Header />
           <main className="flex-1">
