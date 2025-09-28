@@ -210,75 +210,110 @@ export default function HomePage() {
             </p>
           </div>
           
-          <div className="max-w-6xl mx-auto">
-            {/* Current Feature Display */}
-            <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
-              <div className="relative">
-                <img 
-                  src={featureTestimonials[activeFeature].image}
-                  alt={featureTestimonials[activeFeature].title}
-                  className="w-full h-96 object-cover rounded-2xl shadow-lg"
-                />
-              </div>
-              
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-3xl font-bold mb-4" style={{color: '#263237'}}>
-                    {featureTestimonials[activeFeature].title}
-                  </h3>
-                  <div className="flex mb-4">
-                    {[...Array(featureTestimonials[activeFeature].rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                    ))}
+          {/* Elegant Carousel */}
+          <div className="max-w-7xl mx-auto">
+            <div className="relative">
+              {/* Main Carousel Container - 1800px width, 750px height */}
+              <div className="relative mx-auto overflow-hidden rounded-3xl shadow-2xl" style={{width: '1800px', height: '750px', maxWidth: '100%'}}>
+                
+                {/* Curved SVG Divider */}
+                <svg className="absolute inset-0 w-full h-full z-10 pointer-events-none" viewBox="0 0 1800 750" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="curveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" style={{stopColor: 'rgba(5,68,208,0.1)'}} />
+                      <stop offset="100%" style={{stopColor: 'rgba(255,255,255,0.1)'}} />
+                    </linearGradient>
+                  </defs>
+                  <path 
+                    d="M 600 0 Q 650 375 600 750 L 1800 750 L 1800 0 Z" 
+                    fill="rgba(255,255,255,0.95)" 
+                    stroke="rgba(5,68,208,0.2)" 
+                    strokeWidth="2"
+                  />
+                </svg>
+                
+                {/* Left Side - Image (1/3 area) */}
+                <div className="absolute left-0 top-0 w-1/3 h-full">
+                  <img 
+                    src={featureTestimonials[activeFeature].image}
+                    alt={featureTestimonials[activeFeature].title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                
+                {/* Right Side - Content (2/3 area) */}
+                <div className="absolute right-0 top-0 w-2/3 h-full flex flex-col justify-center px-16 z-20">
+                  {/* Customer Logo */}
+                  <div className="mb-8">
+                    <div className="w-32 h-16 rounded-lg flex items-center justify-center" style={{backgroundColor: '#F1F3F6'}}>
+                      <span className="text-2xl font-bold" style={{color: '#0544d0'}}>
+                        {featureTestimonials[activeFeature].author.split(' ')[0]}
+                      </span>
+                    </div>
+                  </div>
+                  
+                  {/* Customer Review */}
+                  <div className="mb-8">
+                    <div className="flex mb-4">
+                      {[...Array(featureTestimonials[activeFeature].rating)].map((_, i) => (
+                        <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                    <blockquote className="text-2xl leading-relaxed mb-6" style={{color: '#263237'}}>
+                      "{featureTestimonials[activeFeature].testimonial}"
+                    </blockquote>
+                  </div>
+                  
+                  {/* Customer Full Name */}
+                  <div className="border-l-4 pl-6" style={{borderColor: '#0544d0'}}>
+                    <p className="text-xl font-bold mb-2" style={{color: '#263237'}}>
+                      {featureTestimonials[activeFeature].author}
+                    </p>
+                    <p className="text-lg" style={{color: '#455962'}}>
+                      {featureTestimonials[activeFeature].location}
+                    </p>
+                    <p className="text-sm mt-1 font-semibold" style={{color: '#0544d0'}}>
+                      {featureTestimonials[activeFeature].title}
+                    </p>
                   </div>
                 </div>
                 
-                <blockquote className="text-xl italic mb-6" style={{color: '#455962'}}>
-                  "{featureTestimonials[activeFeature].testimonial}"
-                </blockquote>
+                {/* Left Navigation Button */}
+                <button
+                  onClick={() => setActiveFeature(activeFeature === 0 ? featureTestimonials.length - 1 : activeFeature - 1)}
+                  className="absolute left-8 top-1/2 transform -translate-y-1/2 w-16 h-16 rounded-full shadow-lg transition-all hover:scale-110 z-30"
+                  style={{backgroundColor: 'rgba(255,255,255,0.9)'}}
+                >
+                  <svg className="w-8 h-8 mx-auto" fill="none" stroke="#0544d0" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
                 
-                <div className="border-l-4 pl-4" style={{borderColor: '#0544d0'}}>
-                  <p className="font-semibold" style={{color: '#263237'}}>
-                    {featureTestimonials[activeFeature].author}
-                  </p>
-                  <p className="text-sm" style={{color: '#455962'}}>
-                    {featureTestimonials[activeFeature].location}
-                  </p>
+                {/* Right Navigation Button */}
+                <button
+                  onClick={() => setActiveFeature(activeFeature === featureTestimonials.length - 1 ? 0 : activeFeature + 1)}
+                  className="absolute right-8 top-1/2 transform -translate-y-1/2 w-16 h-16 rounded-full shadow-lg transition-all hover:scale-110 z-30"
+                  style={{backgroundColor: 'rgba(255,255,255,0.9)'}}
+                >
+                  <svg className="w-8 h-8 mx-auto" fill="none" stroke="#0544d0" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+                
+                {/* Progress Indicators */}
+                <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 z-30">
+                  {featureTestimonials.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setActiveFeature(index)}
+                      className={`w-3 h-3 rounded-full transition-all ${
+                        index === activeFeature ? 'scale-125' : 'hover:scale-110'
+                      }`}
+                      style={{backgroundColor: index === activeFeature ? '#0544d0' : 'rgba(255,255,255,0.6)'}}
+                    />
+                  ))}
                 </div>
               </div>
-            </div>
-            
-            {/* Navigation Dots */}
-            <div className="flex justify-center space-x-3">
-              {featureTestimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setActiveFeature(index)}
-                  className={`w-4 h-4 rounded-full transition-colors ${
-                    index === activeFeature ? '' : ''
-                  }`}
-                  style={{backgroundColor: index === activeFeature ? '#0544d0' : '#F1F3F6'}}
-                />
-              ))}
-            </div>
-            
-            {/* Feature Thumbnails */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-8">
-              {featureTestimonials.map((feature, index) => (
-                <button
-                  key={index}
-                  onClick={() => setActiveFeature(index)}
-                  className={`p-4 rounded-lg text-center transition-all ${
-                    index === activeFeature ? 'shadow-lg' : 'hover:shadow-md'
-                  }`}
-                  style={{
-                    backgroundColor: index === activeFeature ? '#0544d0' : '#F1F3F6',
-                    color: index === activeFeature ? '#FFFFFF' : '#263237'
-                  }}
-                >
-                  <h4 className="text-sm font-semibold">{feature.title}</h4>
-                </button>
-              ))}
             </div>
           </div>
         </div>
